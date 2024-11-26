@@ -1,0 +1,34 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081390: call_start_cpu1 at D:/Espressif/frameworks/esp-idf-v5.1.4/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m0x400850a6: esp_crosscore_isr at D:/Espressif/frameworks/esp-idf-v5.1.4/components/esp_system/crosscore_int.c:96
+0x40082d49: _xt_lowint1 at D:/Espressif/frameworks/esp-idf-v5.1.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x400d720b: Publisher_Task at D:/Espressif/frameworks/mos_mqtt/main/mos_mqtt.c:111
+0x4008bd01: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.1.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33m0x400814a8: cache_ll_l1_get_enabled_bus at D:/Espressif/frameworks/esp-idf-v5.1.4/components/hal/esp32/include/hal/cache_ll.h:177
+ (inlined by) do_multicore_settings at D:/Espressif/frameworks/esp-idf-v5.1.4/components/esp_system/port/cpu_start.c:278
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 9c53b1d1c7cd8a12b35d7626c9f171af53c31f1d5cf19c8a912e7e5e8093a56b[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33m0x40081390: call_start_cpu1 at D:/Espressif/frameworks/esp-idf-v5.1.4/components/esp_system/port/cpu_start.c:159
+[0m
+[0;33m0x400850a6: esp_crosscore_isr at D:/Espressif/frameworks/esp-idf-v5.1.4/components/esp_system/crosscore_int.c:96
+0x40082d49: _xt_lowint1 at D:/Espressif/frameworks/esp-idf-v5.1.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x400d720b: Publisher_Task at D:/Espressif/frameworks/mos_mqtt/main/mos_mqtt.c:111
+0x4008bd01: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.1.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400850a6: esp_crosscore_isr at D:/Espressif/frameworks/esp-idf-v5.1.4/components/esp_system/crosscore_int.c:96
+0x40082d49: _xt_lowint1 at D:/Espressif/frameworks/esp-idf-v5.1.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+0x400d720b: Publisher_Task at D:/Espressif/frameworks/mos_mqtt/main/mos_mqtt.c:111
+0x4008bd01: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.1.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m

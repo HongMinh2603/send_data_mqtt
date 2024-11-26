@@ -1,0 +1,90 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\mos_mqtt\build\bootloader\esp-idf\esptool_py && D:\Espressif.\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.1.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/mos_mqtt/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mos_mqtt.c.obj
+D:/Espressif/frameworks/mos_mqtt/main/mos_mqtt.c: In function 'mqtt_event_handler':
+D:/Espressif/frameworks/mos_mqtt/main/mos_mqtt.c:70:9: warning: unused variable 'msg_id' [-Wunused-variable]
+   70 |     int msg_id;
+      |         ^~~~~~
+D:/Espressif/frameworks/mos_mqtt/main/mos_mqtt.c:69:30: warning: unused variable 'client' [-Wunused-variable]
+   69 |     esp_mqtt_client_handle_t client = event->client;
+      |                              ^~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable mos_mqtt.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated D:/Espressif/frameworks/mos_mqtt/build/mos_mqtt.bin
+[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\mos_mqtt\build\esp-idf\esptool_py && D:\Espressif.\python_env\idf5.1_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.1.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/mos_mqtt/build/partition_table/partition-table.bin D:/Espressif/frameworks/mos_mqtt/build/mos_mqtt.bin"
+mos_mqtt.bin binary size 0xd7750 bytes. Smallest app partition is 0x100000 bytes. 0x288b0 bytes (16%) free.
+[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.1.4\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.1.4 -D SERIAL_TOOL=D:/Espressif./python_env/idf5.1_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.1.4/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Espressif/frameworks/mos_mqtt/build -P D:/Espressif/frameworks/esp-idf-v5.1.4/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 mos_mqtt.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM3
+Connecting...........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:06:1c:86:eb:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16733...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000769b... (100 %)
+Wrote 26720 bytes (16733 compressed) at 0x00001000 in 0.7 seconds (effective 288.8 kbit/s)...
+Hash of data verified.
+Compressed 882512 bytes to 569425...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001cb53... (5 %)
+Writing at 0x00022b4b... (8 %)
+Writing at 0x000287bd... (11 %)
+Writing at 0x00033c8e... (14 %)
+Writing at 0x0003c0f2... (17 %)
+Writing at 0x00041c17... (20 %)
+Writing at 0x000473bf... (22 %)
+Writing at 0x0004ca69... (25 %)
+Writing at 0x000525d3... (28 %)
+Writing at 0x00057f83... (31 %)
+Writing at 0x0005da86... (34 %)
+Writing at 0x000640c6... (37 %)
+Writing at 0x00069b18... (40 %)
+Writing at 0x0006f4d3... (42 %)
+Writing at 0x00074a6c... (45 %)
+Writing at 0x00079c73... (48 %)
+Writing at 0x0007f23f... (51 %)
+Writing at 0x000844b3... (54 %)
+Writing at 0x00089c45... (57 %)
+Writing at 0x0008f347... (60 %)
+Writing at 0x00095152... (62 %)
+Writing at 0x0009a95e... (65 %)
+Writing at 0x0009feb5... (68 %)
+Writing at 0x000a577d... (71 %)
+Writing at 0x000aaff3... (74 %)
+Writing at 0x000b06af... (77 %)
+Writing at 0x000b60fa... (80 %)
+Writing at 0x000bba08... (82 %)
+Writing at 0x000c137f... (85 %)
+Writing at 0x000c9e47... (88 %)
+Writing at 0x000d2692... (91 %)
+Writing at 0x000d80b5... (94 %)
+Writing at 0x000dde13... (97 %)
+Writing at 0x000e33fe... (100 %)
+Wrote 882512 bytes (569425 compressed) at 0x00010000 in 13.1 seconds (effective 537.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 429.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
